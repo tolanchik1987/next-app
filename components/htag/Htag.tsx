@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./htag.module.scss";
-import { IHtagProps } from "./htag.props";
+import { IHtagProps } from "./Htag.props";
 
 const Htag: React.FC<IHtagProps> = ({ tag, children }): JSX.Element => {
    return (

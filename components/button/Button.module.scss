@@ -1,0 +1,25 @@
+.button {
+   display: inline-block;
+   width: 100px;
+   height: 40px;
+   padding: 11px;
+   cursor: pointer;
+   text-align: center;
+   border: 0px;
+   border-radius: 5px;
+   font-size: 14px;
+   transition: box-shadow 0.2s linear;
+   &:hover {
+      box-shadow: 0px 0px 4px black;
+   }
+}
+
+.primary {
+   color: var(--white);
+   background-color: var(--primary);
+}
+.ghost {
+   color: var(--black);
+   background-color: none;
+   border: 1px solid var(--gray-light);
+}
