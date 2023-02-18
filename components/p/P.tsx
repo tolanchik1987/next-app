@@ -1,20 +1,21 @@
 import cn from "classNames";
 import { FC } from "react";
-import { IPtagProps } from "./P.props";
+import { IPProps } from "./P.props";
 import classes from "./P.module.scss";
 
-const Ptag: FC<IPtagProps> = ({ size, children }) => {
+const P: FC<IPProps> = ({ size, children, ...props }) => {
    return (
-      <>
-         <p
-            className={cn(classes.text, {
-               [classes.small]: size == "s",
-               [classes.medium]: size == "m",
-               [classes.large]: size == "l",
-            })}
-         >{children}</p>
-      </>
+      <p
+         className={cn(classes.text, {
+            [classes.small]: size == "s",
+            [classes.medium]: size == "m",
+            [classes.large]: size == "l",
+         })}
+         {...props}
+      >
+         {children}
+      </p>
    );
 };
 
-export default Ptag;
+export default P;
