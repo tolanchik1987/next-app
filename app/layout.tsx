@@ -5,6 +5,7 @@ import "../styles/globals.css";
 import Header from "@/layout/Header/Header";
 import Sidebar from "@/layout/Sidebar/Sidebar";
 import Footer from "@/layout/Footer/Footer";
+import cn from "classNames";
 // import { FunctionComponent } from "react";
 
 // export const withLayout = <T extends Record<string, unknown>>(                  //!     H O C
@@ -26,12 +27,20 @@ const RootLayout: React.FC<ILayoutProps> = ({ children }): JSX.Element => {
       <html lang="ru" className={notoSans.className}>
          <head />
          <body>
-            <Header />
-            <div className={classes.wrapper}>
-               <Sidebar />
+            <div className={classes.page}>
+               <div className={classes.header}>
+                  <Header />
+               </div>
+               {/* <div className={classes.wrapper}> */}
+               <div className={classes.sidebar}>
+                  <Sidebar />
+               </div>
                <div className={classes.content}>{children}</div>
+               {/* </div> */}
+               <div className={classes.footer}>
+                  <Footer />
+               </div>
             </div>
-            <Footer />
          </body>
       </html>
    );
