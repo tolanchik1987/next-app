@@ -17,10 +17,10 @@ const Raiting: FC<IRaitingProps> = ({
    );
 
    useEffect(() => {
-      constuctRaiting(raiting);
+      constructRaiting(raiting);
    }, [raiting]);
 
-   const constuctRaiting = (currentRaiting: number) => {
+   const constructRaiting = (currentRaiting: number) => {
       const updatedArrey = raitingArrey.map((r: JSX.Element, i: number) => {
          return (
             <span
@@ -51,7 +51,7 @@ const Raiting: FC<IRaitingProps> = ({
       if (!isEditable) {
          return;
       }
-      constuctRaiting(i);
+      constructRaiting(i);
    };
 
    const handleClick = (i: number) => {
