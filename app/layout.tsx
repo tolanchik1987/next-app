@@ -27,19 +27,11 @@ const RootLayout: React.FC<ILayoutProps> = ({ children }): JSX.Element => {
       <html lang="ru" className={notoSans.className}>
          <head />
          <body>
-            <div className={classes.page}>
-               <div className={classes.header}>
-                  <Header />
-               </div>
-               {/* <div className={classes.wrapper}> */}
-               <div className={classes.sidebar}>
-                  <Sidebar />
-               </div>
+            <div className={classes.wrapper}>
+               <Header className={classes.header} />
+               <Sidebar className={classes.sidebar} />
                <div className={classes.content}>{children}</div>
-               {/* </div> */}
-               <div className={classes.footer}>
-                  <Footer />
-               </div>
+               <Footer className={classes.footer} />
             </div>
          </body>
       </html>

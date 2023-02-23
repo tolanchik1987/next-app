@@ -1,9 +1,9 @@
 import { ISidebarProps } from "./Sidebar.props";
 import classes from "./Sidebar.module.scss";
 
-const Sidebar: React.FC<ISidebarProps> = ({ children, ...props }): JSX.Element => {
+const Sidebar: React.FC<ISidebarProps> = ({ children, className, ...props }): JSX.Element => {
    return (
-      <div className={classes.container} {...props}>
+      <div className={className} {...props}>
          SIDEBAR
       </div>
    );

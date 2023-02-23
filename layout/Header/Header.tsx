@@ -2,9 +2,9 @@ import { Noto_Sans } from "@next/font/google";
 import { IHeaderProps } from "./Header.props";
 import classes from "./Header.module.scss";
 
-const Header: React.FC<IHeaderProps> = ({ children }): JSX.Element => {
+const Header: React.FC<IHeaderProps> = ({ children, className, ...props }): JSX.Element => {
    return (
-      <div className={classes.header}>
+      <div className={className} {...props}>
          HEADER
       </div>
    );

@@ -1,0 +1,39 @@
+.footer {
+   display: grid;
+      grid-template: 
+      "copyright user politic" auto
+      / 50% 25% 25%;
+   background: var(--primary);
+   color: var(--white);
+   font-size: 16px;
+   line-height: 20px;
+   padding: 25px 30px;
+   align-items: center;
+   a:hover {
+      color: darkblue;
+   }
+   .p1 {
+      text-align: start;
+   }
+   .p2 {
+      text-align: end;
+   }
+   .p3 {
+      text-align: end;
+   }
+}
+
+@media (max-width: 765px) {
+   .footer {
+      grid-template: 
+      "copyright" auto
+      "user" auto
+      "politic" auto
+      / 100%;
+      row-gap: 10px;
+      font-size: 12px;
+      div {
+         text-align: center !important;
+      }
+   }
+}
